@@ -24,10 +24,6 @@ body {
 ::after {
   box-sizing: border-box;
 }
-
-/* .main-container {
-  padding-left: 270px;
-} */
 .section {
     background-color:var(--main-bg);
     min-height: 100vh;
@@ -270,8 +266,6 @@ ul {
 .row {
   display: flex;
   flex-wrap: wrap;
-  /* margin-left: -15px;
-  margin-right: -15px; */
   position: relative;
 }
 
@@ -280,7 +274,6 @@ ul {
 .home {
   min-height: 100vh;
   display: flex;
-  /* color: rgba(0, 0, 0, 0.884); */
   color: var(--text-color);
 }
 .home .home-info {
@@ -404,27 +397,30 @@ h3.profession {
     font-size: 24px;
     margin-bottom: 15px;
     font-weight: 700;
-    /* color: #ec1839; */
     color: var(--skin-color);
   }
+  .about-expbg{
+    display: flex;
+
+  }
   /* skills */
-  .skills .skill-box{
+  .skills {
     display: flex;
     flex-wrap: wrap;
     padding-left: 37px;
-
+    margin-bottom: 30px;
   }
-  .skills .skill-box .skill-content {
+  .skills .skill-content {
     width: 100%;
 
   }
-  .skill-content .content{
+  .skill .skill-content .content{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
 
   }
-  .skill-content .content span{
+  .skill .skill-content .content span{
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -439,15 +435,15 @@ h3.profession {
     color: var(--text-color);
 
   }
-  .skill-content .content span:hover{
+  .skill .skill-content .content span:hover{
     box-shadow:0 0 20px rgb(167, 164, 164);;
   }
 
-  .skill-box .content span i{
+  .skill .content span i{
     font-size: 2.5rem;
     color: var(--skin-color);
   }
-.skill-box .skill-content h3{
+.skill  .skill-content h3{
   color: var(--text-color);
   margin-top: 20px;
   margin-bottom: 10px;
@@ -564,7 +560,6 @@ h3 .year i {
 }
 .edubackground .workexp-content .year {
   color: var(--skin-color);
-  /* color: var(--text-color); */
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 12px;
@@ -592,7 +587,6 @@ h3 .year i {
 /* service */
 .service .service-item {
   margin-bottom: 30px;
-  /* flex: 0 0 33.33%; */
   margin-left: 18px;
   max-width: 30.33%;
 }
@@ -645,10 +639,7 @@ h3 .year i {
 .portfolio .portfolio-item {
   margin-bottom: 30px;
   margin-left: 18px;
-  /* max-width: 30.33%; */
   width: 310px;
-  /* height:800px ; */
-  /* flex: 0 0 33.33%; */
 }
 .portfolio .portfolio-item .portfolio-item-inner {
   background-color: rgba(0, 0, 0, 0.048);
@@ -657,8 +648,8 @@ h3 .year i {
   padding: 20px 15px;
   text-align: center;
   transition: all 0.3s ease;
-  /* overflow: hidden; */
   cursor: pointer;
+
   color: var(--text-color);
 }
 .portfolio .portfolio-item .portfolio-item-inner:hover {
@@ -757,9 +748,7 @@ margin-bottom: 30px;
   padding: 10px 25px;
   border: 1px solid var(--light-color) ;
   font-size: 16px;
-  /* color: white;
-   */
-   transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .contact .contact-form textarea.form-control{
   height: 120px;
@@ -770,14 +759,12 @@ margin-bottom: 30px;
 
 
 /* RESPONSIVENESS */
-/* Desktops */
+/* Large screen */
 @media(max-width:1199px){
+  /* Side Nav */
   .side-nav{
     left: -270px;
   }
-  /* .main-content{
-    padding-left: 0;
-  } */
   .side-nav.open{
     left: 0;
   }
@@ -785,9 +772,14 @@ margin-bottom: 30px;
     display: flex;
     left: 30px;
   }
+
   .side-nav .nav-toggler.open{
     left: 300px;
   }
+  .side-nav .footer{
+    display: none;
+  }
+  /* Section */
   .section{
     left: 0;
   }
@@ -797,37 +789,54 @@ margin-bottom: 30px;
   .section .container{
     padding-top: 70px;
   }
+  /* About */
+  .about-expbg{
+    display: flex;
+
+  }
+  /* Service */
+  .service .service-item {
+    max-width: 45.33%;
+  }
+  /* Skills */
+  .skills .skill-content .content span{
+    width: 13rem;
+    height: 12rem;
+    font-size: 28px;
+
+  }
+  .skill .content span i{
+    font-size: 5.5rem;
+  }
+  .skill  .skill-content h3{
+    font-size: 28px;
+  }
+  /* Portfolio */
+  .portfolio .portfolio-item {
+    max-width: 45.33%;
+    flex: 0 0 45.33%;
+  }
+  .portfolio .portfolio-item .portfolio-item-inner {
+    height: 380px;
+  }
+  .portfolio .portfolio-item .portfolio-item-inner .portfolio-img img{
+    width: 320px;
+    height: 200px;
+  }
+
+  
   
 }
 
 
-/* tablets */
-@media(max-width:991px){
+/* Laptops */
+@media only screen and (min-width:767px) and (max-width:992px){
 
-  /* .home {
-    display: block;
-    flex: 0 0 100%;
+  .section{
+    left: 0;
+    padding: 0;
   }
-  .home .home-info {
-    max-width: 100%;
-    flex: 0 0 100%;
-  }
-  .home .home-img{
-    display: none;
-  } */
-  /* .portfolio .portfolio-item,
-  .service .service-item{
-    flex: 0 0 50%;
-    max-width: 50%;
-  } */
-
-
-
-}
-
-/* mobile phone */
-/* @media(max-width:767px){
-
+  /* Home */
   .home {
     display: block;
     flex: 0 0 100%;
@@ -839,6 +848,186 @@ margin-bottom: 30px;
   .home .home-img{
     display: none;
   }
+  
+  /* About */
+  .about{
+    margin: 0;
+    padding: 5px;
+  }
+  .about-expbg{
+    display: flex;
+
+  }
+.workexperience,
+.edubackground {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+/* Service */
+.service .service-item {
+  max-width: 45.33%;
+}
+/* Portfolio */
+.portfolio .portfolio-item {
+  max-width: 45.33%;
+  flex: 0 0 45.33%;
+}
+.portfolio .portfolio-item {
+  max-width: 45.33%;
+  flex: 0 0 45.33%;
+}
+.portfolio .portfolio-item .portfolio-item-inner {
+  height: 350px;
+}
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-img img{
+  width: 300px;
+  height: 200px;
+}
+/* Contact */
+.contact .contact-row{
+  display: block;
+  width: 100%;
+  align-items: center;
+}
+.contact .contact-form{
+  max-width: 100%;
+  flex:  0 0 100%;
+}
+.contact .contact-left-block{
+  display: flex;
+  gap: 40px;
+}
+/* Nav Footer */
+.footer{
+  display: none;
+}
 
 
-} */
+
+}
+
+/* Smart Phones */
+@media only screen and (max-width:767px){
+  /* Home */
+    .home {
+    display: block;
+    flex: 0 0 100%;
+  }
+  .home .home-info {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .home .home-img{
+    display: none;
+  }
+  /* About */
+  .about-expbg{
+    display: block;
+
+  }
+.workexperience,
+.edubackground {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin: 0;
+}
+/* Services */
+.service .service-item {
+  max-width: 45.33%;
+}
+/* Portfolio */
+.portfolio .portfolio-item {
+  max-width: 45.33%;
+  flex: 0 0 45.33%;
+}
+.portfolio .portfolio-item .portfolio-item-inner {
+  height: 350px;
+}
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-img img{
+  width: 230px;
+  height: 200px;
+}
+/* Contact */
+.contact .contact-row{
+  display: block;
+  gap: 2px;
+  width: 100%;
+  align-items: center;
+}
+.contact .contact-form{
+  max-width: 100%;
+  flex:  0 0 100%;
+}
+.contact .contact-left-block{
+  display: flex;
+  gap: 40px;
+}
+/* Nav Footer */
+.footer{
+  display: none;
+}
+}
+/* Mobile */
+@media only screen and (max-width:600px){
+  /* Home */
+  .home {
+    display: block;
+    flex: 0 0 100%;
+  }
+  .home .btn{
+    margin-top: 20px;
+  }
+  .home .home-info {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .home .home-img{
+    display: none;
+  }
+  /* About */
+  .about-expbg{
+    display: block;
+
+  }
+.workexperience,
+.edubackground {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin: 0;
+}
+/* Services */
+.service .service-item {
+  max-width: 90%;
+}
+/* Portfolio */
+.portfolio .portfolio-item {
+  max-width: 90%;
+  flex: 0 0 90%;
+}
+.portfolio .portfolio-item .portfolio-item-inner {
+  height: 350px;
+}
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-img img{
+  width: 250px;
+  height: 200px;
+}
+/* Contact */
+.contact .contact-row{
+  display: block;
+  gap: 2px;
+  width: 100%;
+  align-items: center;
+}
+.contact .contact-form{
+  max-width: 100%;
+  flex:  0 0 100%;
+}
+.contact .contact-left-block{
+  display: block;
+  gap: 40px;
+}
+/* Nav Footer */
+.footer{
+  display: none;
+}
+}
