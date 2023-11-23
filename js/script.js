@@ -1,7 +1,7 @@
 // Typing Animation
 
 var typed = new Typed(".typing",{
-    strings:["","Web Designer","Web Developer","Graphics Designer","MERN Developer",],
+    strings:["","Web Designer","Web Developer","Graphics Designer","MERN Developer","Code Debugger"],
     typeSpeed:100,
     BackSpeed:60,
     loop:true
@@ -70,6 +70,16 @@ document.querySelector(".hire-me").addEventListener("click",function()
     addBackSection(sectionIndex);
 
 })
+
+// document.querySelector(".project-btn").addEventListener("click",function()
+// {
+//     const sectionIndex = this.getAttribute("data-section-index");
+//     showSection(this)
+//     updateNav(this)
+//     removeBackSection();
+//     addBackSection(sectionIndex);
+
+// })
 
 // sidebar toggler
       const navTogglerBtn = document.querySelector(".nav-toggler"),
